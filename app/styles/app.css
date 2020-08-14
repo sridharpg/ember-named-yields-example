@@ -1,0 +1,15 @@
+ul.group {
+  border: 1px solid black;
+  width: 250px;
+}
+
+ul.group .field {
+  border: 1px dotted gray;
+  padding: 3px;
+  margin: 2px;
+  width: 90%;
+}
+
+ul.group .field[readonly] {
+  background: lightgray;
+}

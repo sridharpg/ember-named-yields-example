@@ -1,0 +1,9 @@
+<ul>
+  {{yield to='form-flare'}}
+  <FormGroup @group={{this.args.orderForm}}></FormGroup>
+  {{#each @groups as |group index|}}
+    <FormGroup @group={{group}}>
+      {{yield to='group-header'}}
+    </FormGroup>
+  {{/each}}
+</ul>

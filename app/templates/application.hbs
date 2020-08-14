@@ -1,5 +1,9 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+{{log orderForm}}
+<FormRoot @groups={{this.groups}} @orderForm={{orderForm}}>
+  <:form-flare>
+    <label><input type="checkbox" {{on "change" this.changed}}/>I am attending</label>
+  </:form-flare>
+  <:group-header>
+    <label>Collapse/Expand</label>
+  </:group-header>
+</FormRoot>

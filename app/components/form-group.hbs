@@ -1,0 +1,11 @@
+<li id={{this.args.group.id}}>
+  <p>{{this.args.group.name}}</p>
+  <ul class="group">
+    {{yield to='group-header'}}
+    {{#each this.args.group.fields as |field index|}}
+      <li>
+        <FormField @field={{field}}></FormField>
+      </li>
+    {{/each}}
+  </ul>
+</li>
