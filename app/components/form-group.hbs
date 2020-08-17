@@ -1,7 +1,7 @@
-<li id={{this.args.group.id}}>
+<li id={{this.args.group.id}} class="form-group">
   <p>{{this.args.group.name}}</p>
+  {{yield to='group-header'}}
   <ul class="group">
-    {{yield to='group-header'}}
     {{#each this.args.group.fields as |field index|}}
       <li>
         <FormField @field={{field}}></FormField>

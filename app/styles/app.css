@@ -1,6 +1,17 @@
-ul.group {
+li.form-group {
   border: 1px solid black;
-  width: 250px;
+  width: 300px;
+  margin: 10px;
+}
+
+li.form-group > p {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+li.form-group li {
+  list-style-type: none;
+  margin-left: -20px;
 }
 
 ul.group .field {
@@ -12,4 +23,8 @@ ul.group .field {
 
 ul.group .field[readonly] {
   background: lightgray;
+}
+
+.hidden {
+  display: none;
 }

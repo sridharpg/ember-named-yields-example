@@ -1,9 +1,18 @@
-{{log orderForm}}
 <FormRoot @groups={{this.groups}} @orderForm={{orderForm}}>
   <:form-flare>
     <label><input type="checkbox" {{on "change" this.changed}}/>I am attending</label>
   </:form-flare>
-  <:group-header>
-    <label>Collapse/Expand</label>
+  <:group-header as |group index|>
+    {{#if (and (eq index 0) this.isIamAttending)}}
+      <button {{on "click" this.toggleCommonOptions}}>
+        {{#if group._showCommonOptions}}
+          <label>Show Details</label>
+        {{else}}
+          <label>Hide Details</label>
+        {{/if}}
+      </button>
+    {{else}}
+      <button {{on "click" (fn this.copyFromOrder index)}}>Copy from order</button>
+    {{/if}}
   </:group-header>
 </FormRoot>
